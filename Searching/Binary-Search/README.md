@@ -54,8 +54,11 @@ lower = mid + 1
 lower = 4 + 1 = 5
 
 mid = 5 ((lower bound) + 6 (upper bound)) / 2
+
 mid = 5 (rounded down)
+
 midValue[mid] = 50
+
 midValue == searchValue ? Yes. Return the mid.
 
 return index 5
