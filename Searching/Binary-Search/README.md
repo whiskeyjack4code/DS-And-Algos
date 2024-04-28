@@ -24,30 +24,38 @@ here, and minus 1 from your array length to get the true upper bound.
    in the first step.
 
 5. With each comparison (or guess), we always eliminate half of values i.e. the values it's impossible to be.
-
+   
+## Example 
 This process of elimination is Logarithmic (the inverse of exponents).
 If we double the array, we only add 1 extra step (the comparison step), before eliminating half the elements again.
+### Create Array
+a = Array[11]{2,4,6,10,25,50,100}.
 
-a = Array[11]{2,4,6,10,25,50,100}
-mid = (0 (lower bound) + 6 (upper bound)) / 2
-mid = 3
-midValue[mid] = 10
+### Get the index of the midpoint and the value at that index
+mid = (0 (lower bound) + 6 (upper bound)) / 2.
 
-{2,4,6,10,25,50,100}
+mid = 3.
 
+midValue[mid] = 10.
+
+### Define the value to search for
 searchValue = 50
 
+### First Comparison
 midValue == searchValue ? No.
+
 searchValue < midValue ? No.
+
 lower = mid + 1
 
 {25,50,100}
 
+### Second Comparison
 lower = 4 + 1 = 5
+
 mid = 5 ((lower bound) + 6 (upper bound)) / 2
 mid = 5 (rounded down)
 midValue[mid] = 50
-
 midValue == searchValue ? Yes. Return the mid.
 
 return index 5
